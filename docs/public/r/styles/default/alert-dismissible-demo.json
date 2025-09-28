@@ -1,0 +1,18 @@
+{
+  "name": "alert-dismissible-demo",
+  "type": "registry:example",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "alert"
+  ],
+  "files": [
+    {
+      "path": "examples/alert-dismissible-demo.tsx",
+      "content": "import { Alert, AlertDescription, AlertTitle } from '@/registry/default/ui/alert';\nimport { CheckCircle, Info, TriangleAlert } from 'lucide-react';\nimport { useState } from 'react';\n\nexport default function AlertDismissibleDemo() {\n  const [alerts, setAlerts] = useState({\n    info: true,\n    success: true,\n    warning: true,\n    error: true,\n  });\n\n  const dismissAlert = (type: keyof typeof alerts) => {\n    setAlerts((prev) => ({ ...prev, [type]: false }));\n  };\n\n  return (\n    <div className='flex flex-col gap-4'>\n      {alerts.info && (\n        <Alert dismissible onDismiss={() => dismissAlert('info')}>\n          <Info className='size-4' />\n          <AlertTitle>Information</AlertTitle>\n          <AlertDescription>\n            This alert can be dismissed. Click the × button to remove it.\n          </AlertDescription>\n        </Alert>\n      )}\n\n      {alerts.success && (\n        <Alert variant='success' dismissible onDismiss={() => dismissAlert('success')}>\n          <CheckCircle className='size-4' />\n          <AlertTitle>Success</AlertTitle>\n          <AlertDescription>\n            Operation completed successfully! This alert can be dismissed.\n          </AlertDescription>\n        </Alert>\n      )}\n\n      {alerts.warning && (\n        <Alert variant='warning' dismissible onDismiss={() => dismissAlert('warning')}>\n          <TriangleAlert className='size-4' />\n          <AlertTitle>Warning</AlertTitle>\n          <AlertDescription>\n            Please review your settings. This warning can be dismissed.\n          </AlertDescription>\n        </Alert>\n      )}\n\n      {alerts.error && (\n        <Alert variant='destructive' dismissible onDismiss={() => dismissAlert('error')}>\n          <TriangleAlert className='size-4' />\n          <AlertTitle>Error</AlertTitle>\n          <AlertDescription>\n            Something went wrong. This error alert can be dismissed.\n          </AlertDescription>\n        </Alert>\n      )}\n    </div>\n  );\n}\n",
+      "type": "registry:example",
+      "target": ""
+    }
+  ]
+}

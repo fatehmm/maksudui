@@ -1,7 +1,7 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry.json",
   "name": "diceui",
-  "homepage": "https://diceui.com",
+  "homepage": "https://maksud.dev",
   "items": [
     {
       "name": "angle-slider",

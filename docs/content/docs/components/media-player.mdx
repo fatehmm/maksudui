@@ -58,7 +58,7 @@ links:
     After completing the prerequisite component updates, install the media player:
 
     ```package-install
-    npx shadcn@latest add "https://diceui.com/r/media-player"
+    npx shadcn@latest add "https://maksud.dev/r/media-player"
     ```
   </Step>
 </Steps>
@@ -401,7 +401,7 @@ A slider component to seek through the media playback.
 #### Styling
 
 ```tsx
-<MediaPlayer.Seek 
+<MediaPlayer.Seek
   className={
     cn(
       "[&_[data-slot='media-player-seek-buffered']]:bg-primary/60",
@@ -483,7 +483,7 @@ A select dropdown to control the media playback speed.
 A button to toggle loop mode.
 
 <AutoTypeTable
-  path="./types/docs/media-player.ts" 
+  path="./types/docs/media-player.ts"
   name="LoopProps"
 />
 
@@ -496,7 +496,7 @@ A button to toggle loop mode.
     {
       title: "[data-state]",
       value: ["on", "off"],
-    },   
+    },
   ]}
 />
 
@@ -600,7 +600,7 @@ A dropdown menu with playback speed selector, caption selector, and resolution s
 - Organized in a clean dropdown interface
 
 ```tsx
-<MediaPlayer.Settings 
+<MediaPlayer.Settings
   speeds={[0.5, 0.75, 1, 1.25, 1.5, 2]}
 />
 ```
@@ -705,7 +705,7 @@ A dropdown menu with playback speed selector, caption selector, and resolution s
       description: "Downloads the media file (if download button is present).",
     },
   ]}
-/> 
+/>
 
 ## Credits
 

@@ -417,5 +417,32 @@
         "type": "registry:ui"
       }
     ]
+  },
+  {
+    "name": "alert",
+    "type": "registry:ui",
+    "dependencies": [
+      "class-variance-authority",
+      "lucide-react"
+    ],
+    "files": [
+      {
+        "path": "ui/alert.tsx",
+        "type": "registry:ui"
+      }
+    ]
+  },
+  {
+    "name": "button",
+    "type": "registry:ui",
+    "dependencies": [
+      "class-variance-authority"
+    ],
+    "files": [
+      {
+        "path": "ui/button.tsx",
+        "type": "registry:ui"
+      }
+    ]
   }
 ]

@@ -13,7 +13,7 @@ links:
 ### CLI
 
 ```package-install
-npx shadcn@latest add "https://diceui.com/r/mask-input"
+npx shadcn@latest add "https://maksud.dev/r/mask-input"
 ```
 
 ### Manual
@@ -45,8 +45,8 @@ Import and use the component directly.
 ```tsx
 import { MaskInput } from "@/components/ui/mask-input";
 
-<MaskInput 
-  mask="phone" 
+<MaskInput
+  mask="phone"
   placeholder="Enter phone number"
   maskPlaceholder="(___) ___-____"
   onValueChange={(masked, unmasked) => {
@@ -127,8 +127,8 @@ const customPattern: MaskPattern = {
   validate: (value, opts) => value.length === 10,
 };
 
-<MaskInput 
-  mask={customPattern} 
+<MaskInput
+  mask={customPattern}
   placeholder="Enter license plate"
   maskPlaceholder="ABC-1234"
 />
@@ -143,24 +143,24 @@ The currency mask uses the `Intl.NumberFormat` API for localization and currency
 <MaskInput mask="currency" />
 
 // Euro formatting with German locale
-<MaskInput 
-  mask="currency" 
-  currency="EUR" 
-  locale="de-DE" 
+<MaskInput
+  mask="currency"
+  currency="EUR"
+  locale="de-DE"
 />
 
 // Japanese Yen formatting
-<MaskInput 
-  mask="currency" 
-  currency="JPY" 
-  locale="ja-JP" 
+<MaskInput
+  mask="currency"
+  currency="JPY"
+  locale="ja-JP"
 />
 
 // British Pound formatting
-<MaskInput 
-  mask="currency" 
-  currency="GBP" 
-  locale="en-GB" 
+<MaskInput
+  mask="currency"
+  currency="GBP"
+  locale="en-GB"
 />
 ```
 
@@ -170,15 +170,15 @@ Use the `maskPlaceholder` prop to control when mask format hints are shown. The 
 
 ```tsx
 // Shows mask placeholder when focused
-<MaskInput 
-  mask="phone" 
+<MaskInput
+  mask="phone"
   placeholder="Enter phone number"
   maskPlaceholder="(___) ___-____"
 />
 
 // No mask placeholder - just regular placeholder behavior
-<MaskInput 
-  mask="phone" 
+<MaskInput
+  mask="phone"
   placeholder="Enter phone number"
 />
 ```

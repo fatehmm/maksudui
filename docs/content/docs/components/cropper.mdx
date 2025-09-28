@@ -13,7 +13,7 @@ links:
 ### CLI
 
 ```package-install
-npx shadcn@latest add "https://diceui.com/r/cropper"
+npx shadcn@latest add "https://maksud.dev/r/cropper"
 
 ```
 
@@ -68,7 +68,7 @@ A cropper with external controls for zoom, rotation, and crop position.
 
 ### With File Upload
 
-A cropper integrated with the [FileUpload](https://diceui.com/docs/components/file-upload) component for uploading and cropping images.
+A cropper integrated with the [FileUpload](https://maksud.dev/docs/components/file-upload) component for uploading and cropping images.
 
 <ComponentTabs name="cropper-file-upload-demo" />
 
@@ -172,7 +172,7 @@ You can use the crop data from `onCropComplete` to perform server-side cropping:
 const onCropComplete = (croppedArea, croppedAreaPixels) => {
   // croppedArea contains percentages (0-100)
   // croppedAreaPixels contains actual pixel coordinates
-  
+
   // Send to server for processing
   cropImage({
     x: croppedAreaPixels.x,
@@ -208,7 +208,7 @@ The cropper supports different object fit modes:
 All core cropping features work in modern browsers:
 
 - **Chrome/Edge**: Full support
-- **Firefox**: Full support  
+- **Firefox**: Full support
 - **Safari**: Full support (iOS 13+)
 
 ### Touch Gestures

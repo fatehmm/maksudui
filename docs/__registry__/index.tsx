@@ -401,6 +401,34 @@ export const Index: Record<string, any> = {
       source: "",
       chunks: []
     },
+    "alert": {
+      name: "alert",
+      description: "",
+      type: "registry:ui",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/ui/alert.tsx",
+        type: "registry:ui",
+        target: ""
+      }],
+      component: React.lazy(() => import("@/registry/default/ui/alert.tsx")),
+      source: "",
+      chunks: []
+    },
+    "button": {
+      name: "button",
+      description: "",
+      type: "registry:ui",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/ui/button.tsx",
+        type: "registry:ui",
+        target: ""
+      }],
+      component: React.lazy(() => import("@/registry/default/ui/button.tsx")),
+      source: "",
+      chunks: []
+    },
     "utils": {
       name: "utils",
       description: "",
@@ -440,6 +468,132 @@ export const Index: Record<string, any> = {
         target: ""
       }],
       component: React.lazy(() => import("@/registry/default/hooks/use-mobile.ts")),
+      source: "",
+      chunks: []
+    },
+    "alert-demo": {
+      name: "alert-demo",
+      description: "",
+      type: "registry:example",
+      registryDependencies: ["alert"],
+      files: [{
+        path: "registry/default/examples/alert-demo.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      component: React.lazy(() => import("@/registry/default/examples/alert-demo.tsx")),
+      source: "",
+      chunks: []
+    },
+    "alert-dismissible-demo": {
+      name: "alert-dismissible-demo",
+      description: "",
+      type: "registry:example",
+      registryDependencies: ["alert"],
+      files: [{
+        path: "registry/default/examples/alert-dismissible-demo.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      component: React.lazy(() => import("@/registry/default/examples/alert-dismissible-demo.tsx")),
+      source: "",
+      chunks: []
+    },
+    "alert-with-actions-demo": {
+      name: "alert-with-actions-demo",
+      description: "",
+      type: "registry:example",
+      registryDependencies: ["alert","button"],
+      files: [{
+        path: "registry/default/examples/alert-with-actions-demo.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      component: React.lazy(() => import("@/registry/default/examples/alert-with-actions-demo.tsx")),
+      source: "",
+      chunks: []
+    },
+    "alert-variants-demo": {
+      name: "alert-variants-demo",
+      description: "",
+      type: "registry:example",
+      registryDependencies: ["alert"],
+      files: [{
+        path: "registry/default/examples/alert-variants-demo.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      component: React.lazy(() => import("@/registry/default/examples/alert-variants-demo.tsx")),
+      source: "",
+      chunks: []
+    },
+    "button-demo": {
+      name: "button-demo",
+      description: "",
+      type: "registry:example",
+      registryDependencies: ["button"],
+      files: [{
+        path: "registry/default/examples/button-demo.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      component: React.lazy(() => import("@/registry/default/examples/button-demo.tsx")),
+      source: "",
+      chunks: []
+    },
+    "button-variants-demo": {
+      name: "button-variants-demo",
+      description: "",
+      type: "registry:example",
+      registryDependencies: ["button"],
+      files: [{
+        path: "registry/default/examples/button-variants-demo.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      component: React.lazy(() => import("@/registry/default/examples/button-variants-demo.tsx")),
+      source: "",
+      chunks: []
+    },
+    "button-sizes-demo": {
+      name: "button-sizes-demo",
+      description: "",
+      type: "registry:example",
+      registryDependencies: ["button"],
+      files: [{
+        path: "registry/default/examples/button-sizes-demo.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      component: React.lazy(() => import("@/registry/default/examples/button-sizes-demo.tsx")),
+      source: "",
+      chunks: []
+    },
+    "button-with-icons-demo": {
+      name: "button-with-icons-demo",
+      description: "",
+      type: "registry:example",
+      registryDependencies: ["button"],
+      files: [{
+        path: "registry/default/examples/button-with-icons-demo.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      component: React.lazy(() => import("@/registry/default/examples/button-with-icons-demo.tsx")),
+      source: "",
+      chunks: []
+    },
+    "button-loading-demo": {
+      name: "button-loading-demo",
+      description: "",
+      type: "registry:example",
+      registryDependencies: ["button"],
+      files: [{
+        path: "registry/default/examples/button-loading-demo.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      component: React.lazy(() => import("@/registry/default/examples/button-loading-demo.tsx")),
       source: "",
       chunks: []
     },

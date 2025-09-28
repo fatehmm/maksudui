@@ -1,12 +1,9 @@
 export type ControlledProps<T extends React.ElementType> = Omit<
   React.ComponentProps<T>,
-  "defaultValue" | "value" | "onValueChange"
+  'defaultValue' | 'value' | 'onValueChange'
 >;
 
-export type EmptyProps<T extends React.ElementType> = Omit<
-  React.ComponentProps<T>,
-  keyof React.ComponentProps<T>
->;
+export type EmptyProps<T extends React.ElementType> = {};
 
 export interface CompositionProps {
   /**
@@ -16,13 +13,17 @@ export interface CompositionProps {
   asChild?: boolean;
 }
 
-export type CozyProps<T extends React.ElementType> = EmptyProps<T> &
-  ControlledProps<T>;
+export type CozyProps<T extends React.ElementType> = EmptyProps<T> & ControlledProps<T>;
 
-export type Direction = "ltr" | "rtl";
+export type Direction = 'ltr' | 'rtl';
 
-export type Orientation = "horizontal" | "vertical";
+export type Orientation = 'horizontal' | 'vertical';
 
-import type { ClientUploadedFileData } from "uploadthing/types";
+import type { ClientUploadedFileData } from 'uploadthing/types';
 
 export interface UploadedFile<T = unknown> extends ClientUploadedFileData<T> {}
+
+export * from './docs/alert';
+export * from './docs/angle-slider';
+export * from './docs/button';
+export * from './docs/utilities';

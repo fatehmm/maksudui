@@ -1,17 +1,15 @@
-import type { DocsLayoutProps } from "fumadocs-ui/layouts/docs";
-import type { BaseLayoutProps } from "fumadocs-ui/layouts/shared";
-import { CheckIcon } from "lucide-react";
-import { Icons } from "@/components/icons";
-import { Badge } from "@/components/ui/badge";
-import { siteConfig } from "@/config/site";
-import { source } from "@/lib/source";
+import { Icons } from '@/components/icons';
+import { siteConfig } from '@/config/site';
+import { source } from '@/lib/source';
+import type { DocsLayoutProps } from 'fumadocs-ui/layouts/docs';
+import type { BaseLayoutProps } from 'fumadocs-ui/layouts/shared';
 
 export const baseOptions: BaseLayoutProps = {
   nav: {
     title: (
       <>
-        <Icons.logo className="size-4" />
-        <span className="font-medium [.uwu_&]:hidden [header_&]:text-[15px]">
+        <Icons.logo className='size-4' />
+        <span className='font-medium [.uwu_&]:hidden [header_&]:text-[15px]'>
           {siteConfig.name}
         </span>
       </>
@@ -19,14 +17,14 @@ export const baseOptions: BaseLayoutProps = {
   },
   links: [
     {
-      text: "Docs",
-      url: "/docs",
+      text: 'Docs',
+      url: '/docs',
     },
     {
-      type: "icon",
+      type: 'icon',
       url: siteConfig.links.github,
-      text: "Github",
-      icon: <Icons.gitHub className="size-4" />,
+      text: 'Github',
+      icon: <Icons.gitHub className='size-4' />,
       external: true,
     },
   ],

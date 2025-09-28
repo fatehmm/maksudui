@@ -1,26 +1,22 @@
-import type { Registry } from "shadcn/schema";
-import { blocks } from "@/registry/registry-blocks";
-import { components } from "@/registry/registry-components";
-import { examples } from "@/registry/registry-examples";
-import { hooks } from "@/registry/registry-hooks";
-import { internal } from "@/registry/registry-internal";
-import { lib } from "@/registry/registry-lib";
-import { themes } from "@/registry/registry-themes";
-import { ui } from "@/registry/registry-ui";
+import type { Registry } from 'shadcn/schema';
+import { blocks } from '@/registry/registry-blocks';
+import { components } from '@/registry/registry-components';
+import { examples } from '@/registry/registry-examples';
+import { hooks } from '@/registry/registry-hooks';
+import { internal } from '@/registry/registry-internal';
+import { lib } from '@/registry/registry-lib';
+import { themes } from '@/registry/registry-themes';
+import { ui } from '@/registry/registry-ui';
 
 export const registry = {
-  name: "diceui/ui",
-  homepage: "https://diceui.com",
+  name: 'diceui/ui',
+  homepage: 'https://maksud.dev',
   items: [
     {
-      name: "index",
-      type: "registry:style",
-      dependencies: [
-        "tailwindcss-animate",
-        "class-variance-authority",
-        "lucide-react",
-      ],
-      registryDependencies: ["utils"],
+      name: 'index',
+      type: 'registry:style',
+      dependencies: ['tailwindcss-animate', 'class-variance-authority', 'lucide-react'],
+      registryDependencies: ['utils'],
       tailwind: {
         config: {
           plugins: ['require("tailwindcss-animate")'],
@@ -30,14 +26,10 @@ export const registry = {
       files: [],
     },
     {
-      name: "style",
-      type: "registry:style",
-      dependencies: [
-        "tailwindcss-animate",
-        "class-variance-authority",
-        "lucide-react",
-      ],
-      registryDependencies: ["utils"],
+      name: 'style',
+      type: 'registry:style',
+      dependencies: ['tailwindcss-animate', 'class-variance-authority', 'lucide-react'],
+      registryDependencies: ['utils'],
       tailwind: {
         config: {
           plugins: ['require("tailwindcss-animate")'],

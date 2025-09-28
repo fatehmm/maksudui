@@ -1,0 +1,18 @@
+{
+  "name": "button-with-icons-demo",
+  "type": "registry:example",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "button"
+  ],
+  "files": [
+    {
+      "path": "examples/button-with-icons-demo.tsx",
+      "content": "import { Button } from '@/registry/default/ui/button';\nimport { Download, Mail, Plus, Settings } from 'lucide-react';\n\nexport default function ButtonWithIconsDemo() {\n  return (\n    <div className='flex flex-col gap-4'>\n      <div className='flex items-center gap-3'>\n        <Button>\n          <Mail className='size-4' />\n          Send Email\n        </Button>\n        <Button variant='outline'>\n          <Download className='size-4' />\n          Download\n        </Button>\n        <Button variant='secondary'>\n          <Settings className='size-4' />\n          Settings\n        </Button>\n      </div>\n\n      <div className='flex items-center gap-3'>\n        <Button size='icon' variant='default'>\n          <Plus className='size-4' />\n        </Button>\n        <Button size='icon' variant='outline'>\n          <Download className='size-4' />\n        </Button>\n        <Button size='icon' variant='ghost'>\n          <Settings className='size-4' />\n        </Button>\n      </div>\n    </div>\n  );\n}\n",
+      "type": "registry:example",
+      "target": ""
+    }
+  ]
+}

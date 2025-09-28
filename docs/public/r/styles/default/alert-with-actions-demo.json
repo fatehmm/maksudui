@@ -1,0 +1,19 @@
+{
+  "name": "alert-with-actions-demo",
+  "type": "registry:example",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "alert",
+    "button"
+  ],
+  "files": [
+    {
+      "path": "examples/alert-with-actions-demo.tsx",
+      "content": "import { Alert, AlertAction, AlertDescription, AlertTitle } from '@/registry/default/ui/alert';\nimport { Button } from '@/registry/default/ui/button';\nimport { TriangleAlert } from 'lucide-react';\n\nexport default function AlertWithActionsDemo() {\n  return (\n    <div className='flex flex-col gap-6'>\n      <div className='flex flex-col gap-2'>\n        <span className='text-muted-foreground text-sm'>Warning with Multiple Actions</span>\n        <Alert variant='warning'>\n          <TriangleAlert className='size-4' />\n          <AlertTitle>Storage Almost Full</AlertTitle>\n          <AlertDescription>\n            Your storage is 90% full. Consider upgrading your plan or cleaning up files.\n          </AlertDescription>\n          <AlertAction>\n            <div className='flex gap-2'>\n              <Button size='sm' variant='warning'>\n                Upgrade Plan\n              </Button>\n              <Button size='sm' variant='outline'>\n                Clean Up\n              </Button>\n            </div>\n          </AlertAction>\n        </Alert>\n      </div>\n\n      <div className='flex flex-col gap-2'>\n        <span className='text-muted-foreground text-sm'>Error with Dismissible Action</span>\n        <Alert variant='destructive' dismissible>\n          <TriangleAlert className='size-4' />\n          <AlertTitle>Connection Failed</AlertTitle>\n          <AlertDescription>\n            Unable to connect to the server. Please check your internet connection.\n          </AlertDescription>\n          <AlertAction>\n            <Button size='sm' variant='destructive'>\n              Retry Connection\n            </Button>\n          </AlertAction>\n        </Alert>\n      </div>\n    </div>\n  );\n}\n",
+      "type": "registry:example",
+      "target": ""
+    }
+  ]
+}

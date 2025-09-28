@@ -1,0 +1,109 @@
+---
+title: Alert
+description: Displays a callout for user attention with support for different variants and dismissible actions.
+preview: true
+links:
+  api: /docs/components/alert#api-reference
+---
+
+<ComponentTabs name="alert-demo" />
+
+## Installation
+
+### CLI
+
+```package-install
+npx shadcn@latest add "https://maksud.dev/r/alert"
+```
+
+### Manual
+
+<Steps>
+  <Step>
+     Install the following dependencies:
+
+     ```package-install
+     class-variance-authority lucide-react
+     ```
+  </Step>
+  <Step>
+    Copy and paste the following code into your project.
+
+    <ComponentSource name="alert" />
+  </Step>
+</Steps>
+
+## Layout
+
+Import the parts and compose them together.
+
+```tsx
+import { Alert, AlertAction, AlertDescription, AlertTitle } from "@/components/ui/alert";
+
+export default function Example() {
+  return (
+    <Alert>
+      <AlertTitle>Alert Title</AlertTitle>
+      <AlertDescription>
+        Alert description or content goes here.
+      </AlertDescription>
+    </Alert>
+  );
+}
+```
+
+## Examples
+
+### Variants
+
+<ComponentTabs name="alert-variants-demo" />
+
+The Alert component supports four variants: `default`, `success`, `warning`, and `destructive`.
+
+### Dismissible
+
+<ComponentTabs name="alert-dismissible-demo" />
+
+Add the `dismissible` prop to make alerts dismissible with a close button.
+
+### With Actions
+
+<ComponentTabs name="alert-with-actions-demo" />
+
+Use `AlertAction` to add interactive elements like buttons to your alerts.
+
+## API Reference
+
+
+<PropsTable
+  data={[
+    {
+      title: "variant",
+      type: "'default' | 'success' | 'warning' | 'destructive'",
+      default: "'default'",
+      description: "The visual style variant of the alert.",
+
+    },
+    {
+      title: "icon",
+      type: "React.ReactNode",
+      default: "undefined",
+      description: "The icon to display in the alert. Not using an icon is perfectly fine - alerts work great with or without icons.",
+    },
+    {
+      title: "dismissible",
+      type: "boolean",
+      default: "false",
+      description: "Whether the alert can be dismissed with a close button.",
+    },
+    {
+      title: "onDismiss",
+      type: "() => void",
+      default: "undefined",
+      description: "Callback function called when the alert is dismissed. Required when dismissible is true.",
+    },
+  ]}
+/>
+
+
+
