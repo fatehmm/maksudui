@@ -1,0 +1,18 @@
+{
+  "name": "badge-with-icons-demo",
+  "type": "registry:example",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "badge"
+  ],
+  "files": [
+    {
+      "path": "examples/badge-with-icons-demo.tsx",
+      "content": "import { Badge } from '@/registry/default/ui/badge';\nimport { AlertTriangle, Check, Info, X } from 'lucide-react';\n\nexport default function BadgeWithIconsDemo() {\n  return (\n    <div className='flex flex-wrap items-center gap-3'>\n      <Badge variant='positive' icon={<Check />}>\n        Success\n      </Badge>\n      <Badge variant='info' icon={<Info />}>\n        Information\n      </Badge>\n      <Badge variant='warning' icon={<AlertTriangle />}>\n        Warning\n      </Badge>\n      <Badge variant='negative' icon={<X />}>\n        Error\n      </Badge>\n    </div>\n  );\n}\n",
+      "type": "registry:example",
+      "target": ""
+    }
+  ]
+}

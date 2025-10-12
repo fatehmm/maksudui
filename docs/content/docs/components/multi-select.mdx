@@ -1,0 +1,166 @@
+---
+title: Multi Select
+description: A multi-select dropdown component that allows users to select multiple options from a list with checkboxes.
+preview: true
+links:
+  api: /docs/components/multi-select#api-reference
+---
+
+<ComponentTabs name="multi-select-demo" />
+
+## Installation
+
+### CLI
+
+```package-install
+npx shadcn@latest add "https://maksud.dev/r/multi-select"
+```
+
+### Manual
+
+<Steps>
+  <Step>
+     Install the following dependencies:
+
+     ```package-install
+     lucide-react
+     ```
+  </Step>
+  <Step>
+    Make sure you have the following components installed:
+
+    - [Button](/docs/components/button)
+    - [Checkbox](/docs/components/checkbox)
+    - [Popover](/docs/components/popover)
+  </Step>
+  <Step>
+    Copy and paste the following code into your project.
+
+    <ComponentSource name="multi-select" />
+  </Step>
+</Steps>
+
+## Layout
+
+Import the component and use it in your application.
+
+```tsx
+import { MultiSelect } from "@/components/ui/multi-select";
+
+export default function Example() {
+  const [selected, setSelected] = React.useState<string[]>([]);
+
+  const options = [
+    { label: "React", value: "react" },
+    { label: "Vue", value: "vue" },
+    { label: "Angular", value: "angular" },
+  ];
+
+  return (
+    <MultiSelect
+      options={options}
+      selected={selected}
+      onChange={setSelected}
+      placeholder="Select frameworks"
+    />
+  );
+}
+```
+
+## Examples
+
+### Basic
+
+<ComponentTabs name="multi-select-demo" />
+
+A simple multi-select with checkboxes and clear functionality.
+
+### With Icons
+
+<ComponentTabs name="multi-select-with-icons-demo" />
+
+Display a check icon next to selected items using the `icon` prop.
+
+### Controlled
+
+<ComponentTabs name="multi-select-controlled-demo" />
+
+Full control over the selected state with external controls.
+
+## API Reference
+
+### MultiSelect
+
+<PropsTable
+  data={[
+    {
+      title: "options",
+      type: "MultiSelectOption[]",
+      default: "required",
+      description: "Array of options to display. Each option has label and value properties.",
+    },
+    {
+      title: "selected",
+      type: "string[]",
+      default: "required",
+      description: "Array of selected option values.",
+    },
+    {
+      title: "onChange",
+      type: "(selected: string[]) => void",
+      default: "required",
+      description: "Callback when selection changes.",
+    },
+    {
+      title: "placeholder",
+      type: "string",
+      default: "'Select items'",
+      description: "Placeholder text shown in the trigger button.",
+    },
+    {
+      title: "emptyMessage",
+      type: "string",
+      default: "'No items found'",
+      description: "Message displayed when options array is empty.",
+    },
+    {
+      title: "icon",
+      type: "React.ComponentType<{ className?: string }>",
+      default: "undefined",
+      description: "Optional icon component to display next to selected items.",
+    },
+    {
+      title: "className",
+      type: "string",
+      default: "undefined",
+      description: "Additional CSS classes for the trigger button.",
+    },
+  ]}
+/>
+
+### MultiSelectOption
+
+<PropsTable
+  data={[
+    {
+      title: "label",
+      type: "string",
+      default: "required",
+      description: "Display text for the option.",
+    },
+    {
+      title: "value",
+      type: "string",
+      default: "required",
+      description: "Unique identifier for the option.",
+    },
+  ]}
+/>
+
+## Accessibility
+
+- Uses proper ARIA roles (`combobox`, `listbox`, `option`) for screen reader support
+- Keyboard navigation with Enter and Space keys to toggle selections
+- Focus management with visible focus indicators
+- Selected state is properly announced to assistive technologies
+- Supports tab navigation through all interactive elements

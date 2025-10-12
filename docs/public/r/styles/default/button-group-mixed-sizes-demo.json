@@ -1,0 +1,16 @@
+{
+  "name": "button-group-mixed-sizes-demo",
+  "type": "registry:example",
+  "registryDependencies": [
+    "button",
+    "button-group"
+  ],
+  "files": [
+    {
+      "path": "examples/button-group-mixed-sizes-demo.tsx",
+      "content": "import ButtonGroup, { ButtonGroupItem } from '@/registry/default/ui/button-group';\n\nexport default function ButtonGroupMixedSizesDemo() {\n  return (\n    <div className='flex flex-col gap-4'>\n      <ButtonGroup size='sm' orientation='horizontal'>\n        <ButtonGroupItem>Small A</ButtonGroupItem>\n        <ButtonGroupItem>Small B</ButtonGroupItem>\n        <ButtonGroupItem>Small C</ButtonGroupItem>\n      </ButtonGroup>\n\n      <ButtonGroup size='default' orientation='horizontal'>\n        <ButtonGroupItem>Default A</ButtonGroupItem>\n        <ButtonGroupItem size='sm'>Sm override</ButtonGroupItem>\n        <ButtonGroupItem>Default C</ButtonGroupItem>\n      </ButtonGroup>\n    </div>\n  );\n}\n",
+      "type": "registry:example",
+      "target": ""
+    }
+  ]
+}

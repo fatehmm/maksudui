@@ -1,40 +1,23 @@
-import {
-  Listbox,
-  ListboxItem,
-  ListboxItemIndicator,
-} from "@/registry/default/ui/listbox";
+'use client';
 
-const tricks = [
-  { label: "Kickflip", description: "Flip the board 360° along its long axis" },
-  {
-    label: "Heelflip",
-    description:
-      "Flip the board 360° along its long axis in the opposite direction of a kickflip",
-  },
-  {
-    label: "360 Varial McTwist",
-    description: "A 540° inverted aerial with a 360° board rotation",
-  },
-  {
-    label: "The 900",
-    description: "Legendary 900° aerial rotation pioneered by Tony Hawk",
-  },
+import * as React from 'react';
+
+import { Listbox, type ListboxOption } from '@/registry/default/ui/listbox';
+
+const options: ListboxOption[] = [
+  { label: 'React', value: 'react' },
+  { label: 'Vue', value: 'vue' },
+  { label: 'Angular', value: 'angular' },
+  { label: 'Svelte', value: 'svelte' },
+  { label: 'Ember', value: 'ember' },
 ];
 
 export default function ListboxDemo() {
+  const [value, setValue] = React.useState<string>('react');
+
   return (
-    <Listbox>
-      {tricks.map((trick) => (
-        <ListboxItem key={trick.label} value={trick.label}>
-          <div className="flex flex-col">
-            <div className="font-medium">{trick.label}</div>
-            <div className="text-muted-foreground text-sm">
-              {trick.description}
-            </div>
-          </div>
-          <ListboxItemIndicator />
-        </ListboxItem>
-      ))}
-    </Listbox>
+    <div className='w-full max-w-sm'>
+      <Listbox options={options} value={value} onChange={setValue} className='h-[250px]' />
+    </div>
   );
 }

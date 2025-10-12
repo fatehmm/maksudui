@@ -223,20 +223,6 @@ export const Index: Record<string, any> = {
       source: "",
       chunks: []
     },
-    "listbox": {
-      name: "listbox",
-      description: "",
-      type: "registry:ui",
-      registryDependencies: undefined,
-      files: [{
-        path: "registry/default/ui/listbox.tsx",
-        type: "registry:ui",
-        target: ""
-      }],
-      component: React.lazy(() => import("@/registry/default/ui/listbox.tsx")),
-      source: "",
-      chunks: []
-    },
     "mask-input": {
       name: "mask-input",
       description: "",
@@ -415,6 +401,20 @@ export const Index: Record<string, any> = {
       source: "",
       chunks: []
     },
+    "badge": {
+      name: "badge",
+      description: "",
+      type: "registry:ui",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/ui/badge.tsx",
+        type: "registry:ui",
+        target: ""
+      }],
+      component: React.lazy(() => import("@/registry/default/ui/badge.tsx")),
+      source: "",
+      chunks: []
+    },
     "button": {
       name: "button",
       description: "",
@@ -426,6 +426,48 @@ export const Index: Record<string, any> = {
         target: ""
       }],
       component: React.lazy(() => import("@/registry/default/ui/button.tsx")),
+      source: "",
+      chunks: []
+    },
+    "button-group": {
+      name: "button-group",
+      description: "",
+      type: "registry:ui",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/ui/button-group.tsx",
+        type: "registry:ui",
+        target: ""
+      }],
+      component: React.lazy(() => import("@/registry/default/ui/button-group.tsx")),
+      source: "",
+      chunks: []
+    },
+    "multi-select": {
+      name: "multi-select",
+      description: "",
+      type: "registry:ui",
+      registryDependencies: ["button","checkbox","popover"],
+      files: [{
+        path: "registry/default/ui/multi-select.tsx",
+        type: "registry:ui",
+        target: ""
+      }],
+      component: React.lazy(() => import("@/registry/default/ui/multi-select.tsx")),
+      source: "",
+      chunks: []
+    },
+    "listbox": {
+      name: "listbox",
+      description: "",
+      type: "registry:ui",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/ui/listbox.tsx",
+        type: "registry:ui",
+        target: ""
+      }],
+      component: React.lazy(() => import("@/registry/default/ui/listbox.tsx")),
       source: "",
       chunks: []
     },
@@ -527,6 +569,62 @@ export const Index: Record<string, any> = {
       source: "",
       chunks: []
     },
+    "badge-demo": {
+      name: "badge-demo",
+      description: "",
+      type: "registry:example",
+      registryDependencies: ["badge"],
+      files: [{
+        path: "registry/default/examples/badge-demo.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      component: React.lazy(() => import("@/registry/default/examples/badge-demo.tsx")),
+      source: "",
+      chunks: []
+    },
+    "badge-variants-demo": {
+      name: "badge-variants-demo",
+      description: "",
+      type: "registry:example",
+      registryDependencies: ["badge"],
+      files: [{
+        path: "registry/default/examples/badge-variants-demo.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      component: React.lazy(() => import("@/registry/default/examples/badge-variants-demo.tsx")),
+      source: "",
+      chunks: []
+    },
+    "badge-shapes-demo": {
+      name: "badge-shapes-demo",
+      description: "",
+      type: "registry:example",
+      registryDependencies: ["badge"],
+      files: [{
+        path: "registry/default/examples/badge-shapes-demo.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      component: React.lazy(() => import("@/registry/default/examples/badge-shapes-demo.tsx")),
+      source: "",
+      chunks: []
+    },
+    "badge-with-icons-demo": {
+      name: "badge-with-icons-demo",
+      description: "",
+      type: "registry:example",
+      registryDependencies: ["badge"],
+      files: [{
+        path: "registry/default/examples/badge-with-icons-demo.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      component: React.lazy(() => import("@/registry/default/examples/badge-with-icons-demo.tsx")),
+      source: "",
+      chunks: []
+    },
     "button-demo": {
       name: "button-demo",
       description: "",
@@ -594,6 +692,216 @@ export const Index: Record<string, any> = {
         target: ""
       }],
       component: React.lazy(() => import("@/registry/default/examples/button-loading-demo.tsx")),
+      source: "",
+      chunks: []
+    },
+    "button-examples": {
+      name: "button-examples",
+      description: "",
+      type: "registry:example",
+      registryDependencies: ["button"],
+      files: [{
+        path: "registry/default/examples/button-examples.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      component: React.lazy(() => import("@/registry/default/examples/button-examples.tsx")),
+      source: "",
+      chunks: []
+    },
+    "button-group-basic-demo": {
+      name: "button-group-basic-demo",
+      description: "",
+      type: "registry:example",
+      registryDependencies: ["button","button-group"],
+      files: [{
+        path: "registry/default/examples/button-group-horizontal-demo.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      component: React.lazy(() => import("@/registry/default/examples/button-group-horizontal-demo.tsx")),
+      source: "",
+      chunks: []
+    },
+    "button-group-horizontal-demo": {
+      name: "button-group-horizontal-demo",
+      description: "",
+      type: "registry:example",
+      registryDependencies: ["button","button-group"],
+      files: [{
+        path: "registry/default/examples/button-group-horizontal-demo.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      component: React.lazy(() => import("@/registry/default/examples/button-group-horizontal-demo.tsx")),
+      source: "",
+      chunks: []
+    },
+    "button-group-vertical-demo": {
+      name: "button-group-vertical-demo",
+      description: "",
+      type: "registry:example",
+      registryDependencies: ["button","button-group"],
+      files: [{
+        path: "registry/default/examples/button-group-vertical-demo.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      component: React.lazy(() => import("@/registry/default/examples/button-group-vertical-demo.tsx")),
+      source: "",
+      chunks: []
+    },
+    "button-group-mixed-sizes-demo": {
+      name: "button-group-mixed-sizes-demo",
+      description: "",
+      type: "registry:example",
+      registryDependencies: ["button","button-group"],
+      files: [{
+        path: "registry/default/examples/button-group-mixed-sizes-demo.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      component: React.lazy(() => import("@/registry/default/examples/button-group-mixed-sizes-demo.tsx")),
+      source: "",
+      chunks: []
+    },
+    "button-group-pill-demo": {
+      name: "button-group-pill-demo",
+      description: "",
+      type: "registry:example",
+      registryDependencies: ["button","button-group"],
+      files: [{
+        path: "registry/default/examples/button-group-pill-demo.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      component: React.lazy(() => import("@/registry/default/examples/button-group-pill-demo.tsx")),
+      source: "",
+      chunks: []
+    },
+    "multi-select-demo": {
+      name: "multi-select-demo",
+      description: "",
+      type: "registry:example",
+      registryDependencies: ["multi-select"],
+      files: [{
+        path: "registry/default/examples/multi-select-demo.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      component: React.lazy(() => import("@/registry/default/examples/multi-select-demo.tsx")),
+      source: "",
+      chunks: []
+    },
+    "multi-select-with-icons-demo": {
+      name: "multi-select-with-icons-demo",
+      description: "",
+      type: "registry:example",
+      registryDependencies: ["multi-select"],
+      files: [{
+        path: "registry/default/examples/multi-select-with-icons-demo.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      component: React.lazy(() => import("@/registry/default/examples/multi-select-with-icons-demo.tsx")),
+      source: "",
+      chunks: []
+    },
+    "multi-select-controlled-demo": {
+      name: "multi-select-controlled-demo",
+      description: "",
+      type: "registry:example",
+      registryDependencies: ["button","multi-select"],
+      files: [{
+        path: "registry/default/examples/multi-select-controlled-demo.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      component: React.lazy(() => import("@/registry/default/examples/multi-select-controlled-demo.tsx")),
+      source: "",
+      chunks: []
+    },
+    "listbox-demo": {
+      name: "listbox-demo",
+      description: "",
+      type: "registry:example",
+      registryDependencies: ["listbox"],
+      files: [{
+        path: "registry/default/examples/listbox-demo.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      component: React.lazy(() => import("@/registry/default/examples/listbox-demo.tsx")),
+      source: "",
+      chunks: []
+    },
+    "listbox-single-demo": {
+      name: "listbox-single-demo",
+      description: "",
+      type: "registry:example",
+      registryDependencies: ["listbox"],
+      files: [{
+        path: "registry/default/examples/listbox-single-demo.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      component: React.lazy(() => import("@/registry/default/examples/listbox-single-demo.tsx")),
+      source: "",
+      chunks: []
+    },
+    "listbox-multiple-demo": {
+      name: "listbox-multiple-demo",
+      description: "",
+      type: "registry:example",
+      registryDependencies: ["listbox"],
+      files: [{
+        path: "registry/default/examples/listbox-multiple-demo.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      component: React.lazy(() => import("@/registry/default/examples/listbox-multiple-demo.tsx")),
+      source: "",
+      chunks: []
+    },
+    "listbox-searchable-demo": {
+      name: "listbox-searchable-demo",
+      description: "",
+      type: "registry:example",
+      registryDependencies: ["listbox"],
+      files: [{
+        path: "registry/default/examples/listbox-searchable-demo.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      component: React.lazy(() => import("@/registry/default/examples/listbox-searchable-demo.tsx")),
+      source: "",
+      chunks: []
+    },
+    "listbox-with-descriptions-demo": {
+      name: "listbox-with-descriptions-demo",
+      description: "",
+      type: "registry:example",
+      registryDependencies: ["listbox"],
+      files: [{
+        path: "registry/default/examples/listbox-with-descriptions-demo.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      component: React.lazy(() => import("@/registry/default/examples/listbox-with-descriptions-demo.tsx")),
+      source: "",
+      chunks: []
+    },
+    "listbox-custom-icon-demo": {
+      name: "listbox-custom-icon-demo",
+      description: "",
+      type: "registry:example",
+      registryDependencies: ["listbox"],
+      files: [{
+        path: "registry/default/examples/listbox-custom-icon-demo.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      component: React.lazy(() => import("@/registry/default/examples/listbox-custom-icon-demo.tsx")),
       source: "",
       chunks: []
     },
@@ -1322,62 +1630,6 @@ export const Index: Record<string, any> = {
         target: ""
       }],
       component: React.lazy(() => import("@/registry/default/examples/kbd-variants-demo.tsx")),
-      source: "",
-      chunks: []
-    },
-    "listbox-demo": {
-      name: "listbox-demo",
-      description: "",
-      type: "registry:example",
-      registryDependencies: ["listbox"],
-      files: [{
-        path: "registry/default/examples/listbox-demo.tsx",
-        type: "registry:example",
-        target: ""
-      }],
-      component: React.lazy(() => import("@/registry/default/examples/listbox-demo.tsx")),
-      source: "",
-      chunks: []
-    },
-    "listbox-grid-demo": {
-      name: "listbox-grid-demo",
-      description: "",
-      type: "registry:example",
-      registryDependencies: ["listbox"],
-      files: [{
-        path: "registry/default/examples/listbox-grid-demo.tsx",
-        type: "registry:example",
-        target: ""
-      }],
-      component: React.lazy(() => import("@/registry/default/examples/listbox-grid-demo.tsx")),
-      source: "",
-      chunks: []
-    },
-    "listbox-group-demo": {
-      name: "listbox-group-demo",
-      description: "",
-      type: "registry:example",
-      registryDependencies: ["listbox"],
-      files: [{
-        path: "registry/default/examples/listbox-group-demo.tsx",
-        type: "registry:example",
-        target: ""
-      }],
-      component: React.lazy(() => import("@/registry/default/examples/listbox-group-demo.tsx")),
-      source: "",
-      chunks: []
-    },
-    "listbox-horizontal-demo": {
-      name: "listbox-horizontal-demo",
-      description: "",
-      type: "registry:example",
-      registryDependencies: ["listbox"],
-      files: [{
-        path: "registry/default/examples/listbox-horizontal-demo.tsx",
-        type: "registry:example",
-        target: ""
-      }],
-      component: React.lazy(() => import("@/registry/default/examples/listbox-horizontal-demo.tsx")),
       source: "",
       chunks: []
     },

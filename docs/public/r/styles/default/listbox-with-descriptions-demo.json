@@ -1,0 +1,15 @@
+{
+  "name": "listbox-with-descriptions-demo",
+  "type": "registry:example",
+  "registryDependencies": [
+    "listbox"
+  ],
+  "files": [
+    {
+      "path": "examples/listbox-with-descriptions-demo.tsx",
+      "content": "'use client';\n\nimport * as React from 'react';\n\nimport { Listbox, type ListboxOption } from '@/registry/default/ui/listbox';\n\nconst statusOptions: ListboxOption[] = [\n  { label: 'To Do', value: 'todo', description: 'Task has not been started' },\n  { label: 'In Progress', value: 'in-progress', description: 'Currently being worked on' },\n  { label: 'Review', value: 'review', description: 'Ready for code review' },\n  { label: 'Testing', value: 'testing', description: 'Being tested by QA' },\n  { label: 'Done', value: 'done', description: 'Task is completed' },\n];\n\nexport default function ListboxWithDescriptionsDemo() {\n  const [status, setStatus] = React.useState<string>('in-progress');\n\n  return (\n    <div className='w-full max-w-sm'>\n      <Listbox options={statusOptions} value={status} onChange={setStatus} className='h-[300px]' />\n    </div>\n  );\n}\n",
+      "type": "registry:example",
+      "target": ""
+    }
+  ]
+}

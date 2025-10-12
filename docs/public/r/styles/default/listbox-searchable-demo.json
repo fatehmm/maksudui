@@ -1,0 +1,15 @@
+{
+  "name": "listbox-searchable-demo",
+  "type": "registry:example",
+  "registryDependencies": [
+    "listbox"
+  ],
+  "files": [
+    {
+      "path": "examples/listbox-searchable-demo.tsx",
+      "content": "'use client';\n\nimport * as React from 'react';\n\nimport { Listbox, type ListboxOption } from '@/registry/default/ui/listbox';\n\nconst teamOptions: ListboxOption[] = [\n  { label: 'Engineering', value: 'engineering', description: 'Build and maintain products' },\n  { label: 'Design', value: 'design', description: 'Create beautiful interfaces' },\n  { label: 'Marketing', value: 'marketing', description: 'Grow the business' },\n  { label: 'Sales', value: 'sales', description: 'Close deals and partnerships' },\n  { label: 'Product', value: 'product', description: 'Define the roadmap' },\n  {\n    label: 'Customer Support',\n    value: 'customer-support',\n    description: 'Help our customers succeed',\n  },\n  { label: 'Finance', value: 'finance', description: 'Manage the numbers' },\n];\n\nexport default function ListboxSearchableDemo() {\n  const [selectedTeam, setSelectedTeam] = React.useState<string>('design');\n\n  return (\n    <div className='w-full max-w-sm'>\n      <Listbox\n        searchable\n        options={teamOptions}\n        value={selectedTeam}\n        onChange={setSelectedTeam}\n        className='h-[350px]'\n      />\n    </div>\n  );\n}\n",
+      "type": "registry:example",
+      "target": ""
+    }
+  ]
+}

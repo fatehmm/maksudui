@@ -1,0 +1,136 @@
+---
+title: Button Group
+description: Group multiple buttons together to form a segmented control with shared sizing and orientation.
+preview: true
+links:
+  api: /docs/components/button-group#api-reference
+---
+
+<ComponentTabs name="button-group-basic-demo" />
+
+## Installation
+
+### CLI
+
+```package-install
+npx shadcn@latest add "https://maksud.dev/r/button-group"
+```
+
+### Manual
+
+<Steps>
+  <Step>
+     Install the following dependencies:
+
+     ```package-install
+     @radix-ui/react-slot
+     ```
+  </Step>
+  <Step>
+    Copy and paste the following code into your project.
+
+    <ComponentSource name="button-group" />
+  </Step>
+</Steps>
+
+## Layout
+
+Import the components and use them in your application.
+
+```tsx
+import ButtonGroup, { ButtonGroupItem } from "@/components/ui/button-group";
+
+export default function Example() {
+  return (
+    <ButtonGroup size="default" orientation="horizontal">
+      <ButtonGroupItem>Day</ButtonGroupItem>
+      <ButtonGroupItem>Week</ButtonGroupItem>
+      <ButtonGroupItem>Month</ButtonGroupItem>
+    </ButtonGroup>
+  );
+}
+```
+
+## Examples
+
+### Horizontal
+
+<ComponentTabs name="button-group-horizontal-demo" />
+
+### Vertical
+
+<ComponentTabs name="button-group-vertical-demo" />
+
+### Pill
+
+<ComponentTabs name="button-group-pill-demo" />
+
+
+## API Reference
+
+### ButtonGroup
+
+<PropsTable
+  data={[
+    {
+      title: "size",
+      type: "'sm' | 'default' | 'pill'",
+      default: "'default'",
+      description: "Size applied to items by default. Items can override via size prop.",
+    },
+    {
+      title: "disabled",
+      type: "boolean",
+      default: "false",
+      description: "Disable all actions on items within the group.",
+    },
+    {
+      title: "orientation",
+      type: "'horizontal' | 'vertical'",
+      default: "'horizontal'",
+      description: "Layout direction for the group.",
+    },
+  ]}
+/>
+
+### ButtonGroupItem
+
+<PropsTable
+  data={[
+    {
+      title: "size",
+      type: "'default' | 'sm' | 'lg' | 'icon' | 'pill'",
+      default: "inherits from ButtonGroup",
+      description: "Overrides the size for an individual item.",
+    },
+    {
+      title: "variant",
+      type: "'default' | 'destructive' | 'warning' | 'outline' | 'secondary' | 'ghost' | 'link' | 'success'",
+      default: "'default'",
+      description: "Visual style of the item (same as Button).",
+    },
+    {
+      title: "asChild",
+      type: "boolean",
+      default: "false",
+      description: "Render the item as a child element via Slot.",
+    },
+    {
+      title: "disabled",
+      type: "boolean",
+      default: "inherits from ButtonGroup",
+      description: "Disable the item.",
+    },
+  ]}
+/>
+
+## Accessibility
+
+- Grouped buttons are keyboard accessible and preserve focus outlines.
+- Use clear labels for each item; avoid icon-only content without `aria-label`.
+- The `disabled` state at the group level disables all items consistently.
+
+## Credits
+
+- Button Group component's source code is taken from [Lemonsqueezy Wedges](https://www.lemonsqueezy.com/wedges) and modified to fit the Maksud UI design system. You can refer to their docs [here](https://www.lemonsqueezy.com/wedges/docs/components/button-group).
+

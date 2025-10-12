@@ -1,0 +1,18 @@
+{
+  "name": "multi-select-with-icons-demo",
+  "type": "registry:example",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "multi-select"
+  ],
+  "files": [
+    {
+      "path": "examples/multi-select-with-icons-demo.tsx",
+      "content": "'use client';\n\nimport { Check } from 'lucide-react';\nimport * as React from 'react';\n\nimport { MultiSelect } from '@/registry/default/ui/multi-select';\n\nexport default function MultiSelectWithIconsDemo() {\n  const [selected, setSelected] = React.useState<string[]>(['react', 'vue']);\n\n  const frameworks = [\n    { label: 'React', value: 'react' },\n    { label: 'Vue', value: 'vue' },\n    { label: 'Angular', value: 'angular' },\n    { label: 'Svelte', value: 'svelte' },\n    { label: 'Ember', value: 'ember' },\n    { label: 'Next.js', value: 'nextjs' },\n  ];\n\n  return (\n    <div className='w-full max-w-md'>\n      <MultiSelect\n        options={frameworks}\n        selected={selected}\n        onChange={setSelected}\n        placeholder='Frameworks'\n        icon={Check}\n      />\n    </div>\n  );\n}\n",
+      "type": "registry:example",
+      "target": ""
+    }
+  ]
+}

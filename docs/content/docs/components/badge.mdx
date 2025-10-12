@@ -1,0 +1,106 @@
+---
+title: Badge
+description: A versatile badge component for displaying status, labels, and metadata with multiple variants and shapes.
+preview: true
+links:
+  api: /docs/components/badge#api-reference
+---
+
+<ComponentTabs name="badge-demo" />
+
+## Installation
+
+### CLI
+
+```package-install
+npx shadcn@latest add "https://maksud.dev/r/badge"
+```
+
+### Manual
+
+<Steps>
+  <Step>
+     Install the following dependencies:
+
+     ```package-install
+     @radix-ui/react-slot class-variance-authority
+     ```
+  </Step>
+  <Step>
+    Copy and paste the following code into your project.
+
+    <ComponentSource name="badge" />
+  </Step>
+</Steps>
+
+## Layout
+
+Import the component and use it in your application.
+
+```tsx
+import { Badge } from "@/components/ui/badge";
+
+export default function Example() {
+  return (
+    <Badge variant="positive">Active</Badge>
+  );
+}
+```
+
+## Examples
+
+### Variants
+
+<ComponentTabs name="badge-variants-demo" />
+
+The Badge component supports five different variants: `positive`, `info`, `negative`, `warning`, and `urgent`.
+
+### Shapes
+
+<ComponentTabs name="badge-shapes-demo" />
+
+Choose from three different shapes: `default` (rounded-md), `pill` (rounded-full), and `square` (rounded-none).
+
+### With Icons
+
+<ComponentTabs name="badge-with-icons-demo" />
+
+Badges can include icons to provide additional visual context using the `icon` prop. Using this prop is optional, you can also pass the icon as a child.
+
+## API Reference
+
+<PropsTable
+  data={[
+    {
+      title: "variant",
+      type: "'positive' | 'info' | 'negative' | 'warning' | 'urgent'",
+      default: "'positive'",
+      description: "The visual style variant of the badge.",
+    },
+    {
+      title: "shape",
+      type: "'default' | 'pill' | 'square'",
+      default: "'default'",
+      description: "The shape of the badge corners.",
+    },
+    {
+      title: "icon",
+      type: "React.ReactNode",
+      default: "undefined",
+      description: "Optional icon to display before the badge content.",
+    },
+    {
+      title: "asChild",
+      type: "boolean",
+      default: "false",
+      description: "When true, renders as a child component (e.g., Link) instead of a span element.",
+    },
+  ]}
+/>
+
+## Accessibility
+
+- The badge uses semantic `<span>` element by default
+- Supports all standard span HTML attributes
+- When used as a status indicator, consider adding `aria-label` for screen readers
+- Icons should be decorative; important information should be in the text content

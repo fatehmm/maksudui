@@ -1,0 +1,16 @@
+{
+  "name": "button-group-basic-demo",
+  "type": "registry:example",
+  "registryDependencies": [
+    "button",
+    "button-group"
+  ],
+  "files": [
+    {
+      "path": "examples/button-group-horizontal-demo.tsx",
+      "content": "import ButtonGroup, { ButtonGroupItem } from '@/registry/default/ui/button-group';\n\nexport default function ButtonGroupHorizontalDemo() {\n  return (\n    <ButtonGroup size='default' orientation='horizontal'>\n      <ButtonGroupItem>Day</ButtonGroupItem>\n      <ButtonGroupItem>Week</ButtonGroupItem>\n      <ButtonGroupItem>Month</ButtonGroupItem>\n    </ButtonGroup>\n  );\n}\n",
+      "type": "registry:example",
+      "target": ""
+    }
+  ]
+}

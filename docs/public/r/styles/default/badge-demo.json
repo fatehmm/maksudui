@@ -1,0 +1,15 @@
+{
+  "name": "badge-demo",
+  "type": "registry:example",
+  "registryDependencies": [
+    "badge"
+  ],
+  "files": [
+    {
+      "path": "examples/badge-demo.tsx",
+      "content": "import { Badge } from '@/registry/default/ui/badge';\n\nexport default function BadgeDemo() {\n  return (\n    <div className='flex items-center gap-3'>\n      <Badge variant='positive'>Active</Badge>\n      <Badge variant='info'>Beta</Badge>\n      <Badge variant='negative'>Error</Badge>\n    </div>\n  );\n}\n",
+      "type": "registry:example",
+      "target": ""
+    }
+  ]
+}

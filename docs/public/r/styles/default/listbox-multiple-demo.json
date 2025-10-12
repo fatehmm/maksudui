@@ -1,0 +1,15 @@
+{
+  "name": "listbox-multiple-demo",
+  "type": "registry:example",
+  "registryDependencies": [
+    "listbox"
+  ],
+  "files": [
+    {
+      "path": "examples/listbox-multiple-demo.tsx",
+      "content": "'use client';\n\nimport * as React from 'react';\n\nimport { Listbox, type ListboxOption } from '@/registry/default/ui/listbox';\n\nconst projectOptions: ListboxOption[] = [\n  { label: 'Website Redesign', value: 'website-redesign' },\n  { label: 'Mobile App', value: 'mobile-app' },\n  { label: 'API Development', value: 'api-development' },\n  { label: 'Database Migration', value: 'database-migration' },\n  { label: 'Security Audit', value: 'security-audit' },\n  { label: 'Performance Optimization', value: 'performance-optimization' },\n];\n\nexport default function ListboxMultipleDemo() {\n  const [selectedProjects, setSelectedProjects] = React.useState<string[]>(['mobile-app']);\n\n  return (\n    <div className='w-full max-w-sm space-y-4'>\n      <Listbox\n        multiple\n        options={projectOptions}\n        value={selectedProjects}\n        onChange={setSelectedProjects}\n        className='h-[300px]'\n      />\n      <div className='text-sm'>\n        <span className='font-medium'>Selected ({selectedProjects.length}): </span>\n        <span className='text-muted-foreground'>\n          {selectedProjects.length > 0 ? selectedProjects.join(', ') : 'None'}\n        </span>\n      </div>\n    </div>\n  );\n}\n",
+      "type": "registry:example",
+      "target": ""
+    }
+  ]
+}

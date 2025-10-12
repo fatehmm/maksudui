@@ -1,6 +1,6 @@
 ---
 title: Listbox
-description: A component for creating keyboard-navigable selection lists and grids.
+description: An accessible listbox component with single and multiple selection, keyboard navigation, search, and customizable icons.
 preview: true
 links:
   api: /docs/components/listbox#api-reference
@@ -8,14 +8,7 @@ links:
 
 <ComponentTabs name="listbox-demo" />
 
-
 ## Installation
-
-```package-install
-@diceui/listbox
-```
-
-## Installation with shadcn/ui
 
 ### CLI
 
@@ -30,8 +23,13 @@ npx shadcn@latest add "https://maksud.dev/r/listbox"
      Install the following dependencies:
 
      ```package-install
-     @diceui/listbox
+     lucide-react
      ```
+  </Step>
+  <Step>
+    Make sure you have the following components installed:
+
+    - [Scroll Area](/docs/components/scroll-area)
   </Step>
   <Step>
     Copy and paste the following code into your project.
@@ -42,122 +40,169 @@ npx shadcn@latest add "https://maksud.dev/r/listbox"
 
 ## Layout
 
-Import the parts, and compose them together.
+Import the component and use it in your application.
 
 ```tsx
-import * as Listbox from "@diceui/listbox"
+import { Listbox } from "@/components/ui/listbox";
 
-<Listbox.Root>
-  <Listbox.Group>
-    <Listbox.GroupLabel/>
-    <Listbox.Item >
-      <Listbox.ItemIndicator />
-    </Listbox.Item>
-  </Listbox.Group>
-</Listbox.Root>
+const options = [
+  { label: "Option 1", value: "1" },
+  { label: "Option 2", value: "2" },
+  { label: "Option 3", value: "3" },
+];
+
+export default function Example() {
+  const [value, setValue] = React.useState("");
+
+  return (
+    <Listbox
+      options={options}
+      value={value}
+      onChange={setValue}
+    />
+  );
+}
 ```
 
 ## Examples
 
-### Horizontal Orientation
+### Single Selection
 
-Set `orientation="horizontal"` to create a horizontally navigable list.
+<ComponentTabs name="listbox-single-demo" />
 
-<ComponentTabs name="listbox-horizontal-demo" />
+Select a single option from the list.
 
-### Grid Layout
+### Multiple Selection
 
-For grid layouts, use `orientation="mixed"` to enable navigation in both directions.
-Use CSS Grid to arrange the items in a grid structure. In grid layouts,
-arrow keys will navigate accordingly:
+<ComponentTabs name="listbox-multiple-demo" />
 
-- Up/Down: Navigates within a column
-- Left/Right: Navigates within a row
+Select multiple options using the `multiple` prop.
 
-<ComponentTabs name="listbox-grid-demo" />
+### With Search
 
-### Grouped Items
+<ComponentTabs name="listbox-searchable-demo" />
 
-Group items together to create a list of related options.
+Enable search functionality with the `searchable` prop to filter options.
 
-<ComponentTabs name="listbox-group-demo" />
+### With Descriptions
+
+<ComponentTabs name="listbox-with-descriptions-demo" />
+
+Display additional information for each option using the `description` field.
+
+### Custom Icon
+
+<ComponentTabs name="listbox-custom-icon-demo" />
+
+Customize the selection indicator icon with the `icon` prop.
 
 ## API Reference
 
-### Root
+### Listbox
 
-The root component for creating listboxes.
-
-<AutoTypeTable
-  path="./types/docs/listbox.ts"
-  name="RootProps"
-/>
-
-### Group
-
-A group of items inside the selectable list.
-
-<AutoTypeTable
-  path="./types/docs/listbox.ts"
-  name="GroupProps"
-/>
-
-### GroupLabel
-
-A label for the group of items.
-
-<AutoTypeTable
-  path="./types/docs/listbox.ts"
-  name="GroupLabelProps"
-/>
-
-### Item
-
-An item inside the selectable list.
-
-<AutoTypeTable
-  path="./types/docs/listbox.ts"
-  name="ItemProps"
-/>
-
-### ItemIndicator
-
-A visual indicator that shows when the item is selected.
-
-<AutoTypeTable
-  path="./types/docs/listbox.ts"
-  name="ItemIndicatorProps"
-/>
-
-## Accessibility
-
-### Keyboard Interactions
-
-<KeyboardShortcutsTable
-  shortcuts={[
+<PropsTable
+  data={[
     {
-      keys: ["Tab"],
-      description: "Focuses the last active item in the list.",
+      title: "options",
+      type: "ListboxOption[]",
+      default: "required",
+      description: "Array of options to display.",
     },
     {
-      keys: ["Shift + Tab"],
-      description: "Moves focus to previous focusable item in the list.",
+      title: "value",
+      type: "string | string[]",
+      default: "undefined",
+      description: "Selected value(s). Use string for single selection, string[] for multiple.",
     },
     {
-      keys: ["ArrowUp"],
-      description: "Moves highlighting to previous item in vertical lists.",
+      title: "onChange",
+      type: "(value: string | string[]) => void",
+      default: "required",
+      description: "Callback when selection changes.",
     },
     {
-      keys: ["ArrowDown"],
-      description: "Moves highlighting to next item in vertical lists.",
+      title: "multiple",
+      type: "boolean",
+      default: "false",
+      description: "Enable multiple selection mode.",
     },
     {
-      keys: ["ArrowLeft"],
-      description: "Moves highlighting to previous item in horizontal lists.",
+      title: "searchable",
+      type: "boolean",
+      default: "false",
+      description: "Enable search input to filter options.",
     },
     {
-      keys: ["ArrowRight"],
-      description: "Moves highlighting to next item in horizontal lists.",
+      title: "searchPlaceholder",
+      type: "string",
+      default: "'Search...'",
+      description: "Placeholder text for the search input.",
+    },
+    {
+      title: "emptyMessage",
+      type: "string",
+      default: "'No options available'",
+      description: "Message displayed when no options match the search or list is empty.",
+    },
+    {
+      title: "icon",
+      type: "React.ComponentType<{ className?: string }>",
+      default: "Check (from lucide-react)",
+      description: "Icon component displayed next to selected items.",
+    },
+    {
+      title: "className",
+      type: "string",
+      default: "undefined",
+      description: "Additional CSS classes for the container.",
     },
   ]}
 />
+
+### ListboxOption
+
+<PropsTable
+  data={[
+    {
+      title: "label",
+      type: "string",
+      default: "required",
+      description: "Display text for the option.",
+    },
+    {
+      title: "value",
+      type: "string",
+      default: "required",
+      description: "Unique identifier for the option.",
+    },
+    {
+      title: "disabled",
+      type: "boolean",
+      default: "false",
+      description: "Disable the option from being selected.",
+    },
+    {
+      title: "description",
+      type: "string",
+      default: "undefined",
+      description: "Optional description text shown below the label.",
+    },
+  ]}
+/>
+
+## Keyboard Navigation
+
+The Listbox component supports full keyboard navigation:
+
+- `↑` `↓` - Navigate through options
+- `Enter` / `Space` - Select focused option
+- `Home` / `End` - Jump to first/last option
+- Focus is automatically managed and visible
+
+## Accessibility
+
+- Uses proper ARIA roles (`listbox`, `option`) for screen reader support
+- Full keyboard navigation with arrow keys, Enter, Space, Home, and End
+- Proper focus management with visible indicators
+- Selected and disabled states are announced to assistive technologies
+- Search input is properly labeled for accessibility

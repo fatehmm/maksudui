@@ -1,0 +1,16 @@
+{
+  "name": "multi-select-controlled-demo",
+  "type": "registry:example",
+  "registryDependencies": [
+    "button",
+    "multi-select"
+  ],
+  "files": [
+    {
+      "path": "examples/multi-select-controlled-demo.tsx",
+      "content": "'use client';\n\nimport * as React from 'react';\n\nimport { Button } from '@/registry/default/ui/button';\nimport { MultiSelect } from '@/registry/default/ui/multi-select';\n\nexport default function MultiSelectControlledDemo() {\n  const [selected, setSelected] = React.useState<string[]>(['react']);\n\n  const frameworks = [\n    { label: 'React', value: 'react' },\n    { label: 'Vue', value: 'vue' },\n    { label: 'Angular', value: 'angular' },\n    { label: 'Svelte', value: 'svelte' },\n    { label: 'Ember', value: 'ember' },\n  ];\n\n  function selectAll() {\n    setSelected(frameworks.map((f) => f.value));\n  }\n\n  function clearAll() {\n    setSelected([]);\n  }\n\n  return (\n    <div className='w-full max-w-md space-y-4'>\n      <MultiSelect\n        options={frameworks}\n        selected={selected}\n        onChange={setSelected}\n        placeholder='Frameworks'\n      />\n      <div className='flex gap-2'>\n        <Button variant='outline' size='sm' onClick={selectAll}>\n          Select All\n        </Button>\n        <Button variant='outline' size='sm' onClick={clearAll}>\n          Clear All\n        </Button>\n      </div>\n      <div className='rounded-md border p-3'>\n        <p className='text-muted-foreground text-sm'>\n          Selected: {selected.length === 0 ? 'None' : selected.join(', ')}\n        </p>\n      </div>\n    </div>\n  );\n}\n",
+      "type": "registry:example",
+      "target": ""
+    }
+  ]
+}

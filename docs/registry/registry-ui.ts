@@ -199,17 +199,7 @@ export const ui: Registry['items'] = [
       },
     ],
   },
-  {
-    name: 'listbox',
-    type: 'registry:ui',
-    dependencies: ['@diceui/listbox', 'lucide-react'],
-    files: [
-      {
-        path: 'ui/listbox.tsx',
-        type: 'registry:ui',
-      },
-    ],
-  },
+
   {
     name: 'mask-input',
     type: 'registry:ui',
@@ -365,12 +355,57 @@ export const ui: Registry['items'] = [
     ],
   },
   {
+    name: 'badge',
+    type: 'registry:ui',
+    dependencies: ['@radix-ui/react-slot', 'class-variance-authority'],
+    files: [
+      {
+        path: 'ui/badge.tsx',
+        type: 'registry:ui',
+      },
+    ],
+  },
+  {
     name: 'button',
     type: 'registry:ui',
     dependencies: ['class-variance-authority'],
     files: [
       {
         path: 'ui/button.tsx',
+        type: 'registry:ui',
+      },
+    ],
+  },
+  {
+    name: 'button-group',
+    type: 'registry:ui',
+    dependencies: ['@radix-ui/react-slot'],
+    files: [
+      {
+        path: 'ui/button-group.tsx',
+        type: 'registry:ui',
+      },
+    ],
+  },
+  {
+    name: 'multi-select',
+    type: 'registry:ui',
+    dependencies: ['lucide-react'],
+    registryDependencies: ['button', 'checkbox', 'popover'],
+    files: [
+      {
+        path: 'ui/multi-select.tsx',
+        type: 'registry:ui',
+      },
+    ],
+  },
+  {
+    name: 'listbox',
+    type: 'registry:ui',
+    dependencies: ['lucide-react', '@radix-ui/react-scroll-area'],
+    files: [
+      {
+        path: 'ui/listbox.tsx',
         type: 'registry:ui',
       },
     ],

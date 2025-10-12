@@ -50,6 +50,51 @@ export const examples: Registry['items'] = [
     ],
   },
   {
+    name: 'badge-demo',
+    type: 'registry:example',
+    registryDependencies: ['badge'],
+    files: [
+      {
+        path: 'examples/badge-demo.tsx',
+        type: 'registry:example',
+      },
+    ],
+  },
+  {
+    name: 'badge-variants-demo',
+    type: 'registry:example',
+    registryDependencies: ['badge'],
+    files: [
+      {
+        path: 'examples/badge-variants-demo.tsx',
+        type: 'registry:example',
+      },
+    ],
+  },
+  {
+    name: 'badge-shapes-demo',
+    type: 'registry:example',
+    registryDependencies: ['badge'],
+    files: [
+      {
+        path: 'examples/badge-shapes-demo.tsx',
+        type: 'registry:example',
+      },
+    ],
+  },
+  {
+    name: 'badge-with-icons-demo',
+    type: 'registry:example',
+    dependencies: ['lucide-react'],
+    registryDependencies: ['badge'],
+    files: [
+      {
+        path: 'examples/badge-with-icons-demo.tsx',
+        type: 'registry:example',
+      },
+    ],
+  },
+  {
     name: 'button-demo',
     type: 'registry:example',
     registryDependencies: ['button'],
@@ -103,6 +148,174 @@ export const examples: Registry['items'] = [
     files: [
       {
         path: 'examples/button-loading-demo.tsx',
+        type: 'registry:example',
+      },
+    ],
+  },
+  {
+    name: 'button-examples',
+    type: 'registry:example',
+    dependencies: ['lucide-react'],
+    registryDependencies: ['button'],
+    files: [
+      {
+        path: 'examples/button-examples.tsx',
+        type: 'registry:example',
+      },
+    ],
+  },
+  {
+    name: 'button-group-basic-demo',
+    type: 'registry:example',
+    registryDependencies: ['button', 'button-group'],
+    files: [
+      {
+        path: 'examples/button-group-horizontal-demo.tsx',
+        type: 'registry:example',
+      },
+    ],
+  },
+  {
+    name: 'button-group-horizontal-demo',
+    type: 'registry:example',
+    registryDependencies: ['button', 'button-group'],
+    files: [
+      {
+        path: 'examples/button-group-horizontal-demo.tsx',
+        type: 'registry:example',
+      },
+    ],
+  },
+  {
+    name: 'button-group-vertical-demo',
+    type: 'registry:example',
+    registryDependencies: ['button', 'button-group'],
+    files: [
+      {
+        path: 'examples/button-group-vertical-demo.tsx',
+        type: 'registry:example',
+      },
+    ],
+  },
+  {
+    name: 'button-group-mixed-sizes-demo',
+    type: 'registry:example',
+    registryDependencies: ['button', 'button-group'],
+    files: [
+      {
+        path: 'examples/button-group-mixed-sizes-demo.tsx',
+        type: 'registry:example',
+      },
+    ],
+  },
+  {
+    name: 'button-group-pill-demo',
+    type: 'registry:example',
+    registryDependencies: ['button', 'button-group'],
+    files: [
+      {
+        path: 'examples/button-group-pill-demo.tsx',
+        type: 'registry:example',
+      },
+    ],
+  },
+  {
+    name: 'multi-select-demo',
+    type: 'registry:example',
+    registryDependencies: ['multi-select'],
+    files: [
+      {
+        path: 'examples/multi-select-demo.tsx',
+        type: 'registry:example',
+      },
+    ],
+  },
+  {
+    name: 'multi-select-with-icons-demo',
+    type: 'registry:example',
+    dependencies: ['lucide-react'],
+    registryDependencies: ['multi-select'],
+    files: [
+      {
+        path: 'examples/multi-select-with-icons-demo.tsx',
+        type: 'registry:example',
+      },
+    ],
+  },
+  {
+    name: 'multi-select-controlled-demo',
+    type: 'registry:example',
+    registryDependencies: ['button', 'multi-select'],
+    files: [
+      {
+        path: 'examples/multi-select-controlled-demo.tsx',
+        type: 'registry:example',
+      },
+    ],
+  },
+  {
+    name: 'listbox-demo',
+    type: 'registry:example',
+    registryDependencies: ['listbox'],
+    files: [
+      {
+        path: 'examples/listbox-demo.tsx',
+        type: 'registry:example',
+      },
+    ],
+  },
+  {
+    name: 'listbox-single-demo',
+    type: 'registry:example',
+    registryDependencies: ['listbox'],
+    files: [
+      {
+        path: 'examples/listbox-single-demo.tsx',
+        type: 'registry:example',
+      },
+    ],
+  },
+  {
+    name: 'listbox-multiple-demo',
+    type: 'registry:example',
+    registryDependencies: ['listbox'],
+    files: [
+      {
+        path: 'examples/listbox-multiple-demo.tsx',
+        type: 'registry:example',
+      },
+    ],
+  },
+  {
+    name: 'listbox-searchable-demo',
+    type: 'registry:example',
+    registryDependencies: ['listbox'],
+    files: [
+      {
+        path: 'examples/listbox-searchable-demo.tsx',
+        type: 'registry:example',
+      },
+    ],
+  },
+  {
+    name: 'listbox-with-descriptions-demo',
+    type: 'registry:example',
+    registryDependencies: ['listbox'],
+    files: [
+      {
+        path: 'examples/listbox-with-descriptions-demo.tsx',
+        type: 'registry:example',
+      },
+    ],
+  },
+  {
+    name: 'listbox-custom-icon-demo',
+    type: 'registry:example',
+    dependencies: ['lucide-react'],
+    registryDependencies: ['listbox'],
+    files: [
+      {
+        path: 'examples/listbox-custom-icon-demo.tsx',
         type: 'registry:example',
       },
     ],
@@ -723,50 +936,7 @@ export const examples: Registry['items'] = [
       },
     ],
   },
-  {
-    name: 'listbox-demo',
-    type: 'registry:example',
-    registryDependencies: ['listbox'],
-    files: [
-      {
-        path: 'examples/listbox-demo.tsx',
-        type: 'registry:example',
-      },
-    ],
-  },
-  {
-    name: 'listbox-grid-demo',
-    type: 'registry:example',
-    registryDependencies: ['listbox'],
-    files: [
-      {
-        path: 'examples/listbox-grid-demo.tsx',
-        type: 'registry:example',
-      },
-    ],
-  },
-  {
-    name: 'listbox-group-demo',
-    type: 'registry:example',
-    registryDependencies: ['listbox'],
-    files: [
-      {
-        path: 'examples/listbox-group-demo.tsx',
-        type: 'registry:example',
-      },
-    ],
-  },
-  {
-    name: 'listbox-horizontal-demo',
-    type: 'registry:example',
-    registryDependencies: ['listbox'],
-    files: [
-      {
-        path: 'examples/listbox-horizontal-demo.tsx',
-        type: 'registry:example',
-      },
-    ],
-  },
+
   {
     name: 'masonry-demo',
     type: 'registry:example',

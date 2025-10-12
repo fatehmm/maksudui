@@ -1,0 +1,18 @@
+{
+  "name": "button-examples",
+  "type": "registry:example",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "button"
+  ],
+  "files": [
+    {
+      "path": "examples/button-examples.tsx",
+      "content": "import { Button } from '@/registry/default/ui/button';\nimport { Check, Download, Mail, Plus, Settings } from 'lucide-react';\n\nexport default function ButtonExamples() {\n  return (\n    <div className='flex flex-col gap-6'>\n      {/* Variants */}\n      <div className='grid grid-cols-2 gap-3 md:grid-cols-4'>\n        <Button variant='default'>Update</Button>\n        <Button variant='destructive'>Delete User</Button>\n        <Button variant='outline'>Learn More</Button>\n        <Button variant='secondary'>Secondary</Button>\n        <Button variant='ghost'>Ghost</Button>\n        <Button variant='link'>Link</Button>\n        <Button variant='success'>Success</Button>\n      </div>\n\n      {/* With icons */}\n      <div className='flex items-center gap-3'>\n        <Button>\n          <Mail className='size-4' />\n          Send Email\n        </Button>\n        <Button variant='outline'>\n          <Download className='size-4' />\n          Download\n        </Button>\n        <Button variant='secondary'>\n          <Settings className='size-4' />\n          Settings\n        </Button>\n        <Button variant='success'>\n          <Check className='size-4' />\n          Success\n        </Button>\n      </div>\n\n      {/* Sizes */}\n      <div className='flex items-center gap-3'>\n        <Button size='sm'>Small</Button>\n        <Button size='default'>Default</Button>\n        <Button size='lg'>Large</Button>\n        <Button size='pill'>Pill</Button>\n      </div>\n\n      {/* Icon buttons */}\n      <div className='flex items-center gap-3'>\n        <Button size='icon' variant='default' aria-label='Add'>\n          <Plus className='size-4' />\n        </Button>\n        <Button size='icon' variant='outline' aria-label='Download'>\n          <Download className='size-4' />\n        </Button>\n        <Button size='icon' variant='ghost' aria-label='Settings'>\n          <Settings className='size-4' />\n        </Button>\n      </div>\n    </div>\n  );\n}\n",
+      "type": "registry:example",
+      "target": ""
+    }
+  ]
+}

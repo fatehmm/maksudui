@@ -1,0 +1,15 @@
+{
+  "name": "listbox-single-demo",
+  "type": "registry:example",
+  "registryDependencies": [
+    "listbox"
+  ],
+  "files": [
+    {
+      "path": "examples/listbox-single-demo.tsx",
+      "content": "'use client';\n\nimport * as React from 'react';\n\nimport { Listbox, type ListboxOption } from '@/registry/default/ui/listbox';\n\nconst teamOptions: ListboxOption[] = [\n  { label: 'Engineering', value: 'engineering', description: 'Build and maintain products' },\n  { label: 'Design', value: 'design', description: 'Create beautiful interfaces' },\n  { label: 'Marketing', value: 'marketing', description: 'Grow the business' },\n  { label: 'Sales', value: 'sales', description: 'Close deals and partnerships' },\n  { label: 'Product', value: 'product', description: 'Define the roadmap' },\n  { label: 'HR', value: 'hr', description: 'People and culture', disabled: true },\n];\n\nexport default function ListboxSingleDemo() {\n  const [selectedTeam, setSelectedTeam] = React.useState<string>('engineering');\n\n  return (\n    <div className='w-full max-w-sm space-y-4'>\n      <Listbox\n        options={teamOptions}\n        value={selectedTeam}\n        onChange={setSelectedTeam}\n        className='h-[300px]'\n      />\n      <div className='text-sm'>\n        <span className='font-medium'>Selected: </span>\n        <span className='text-muted-foreground'>\n          {teamOptions.find((t) => t.value === selectedTeam)?.label || 'None'}\n        </span>\n      </div>\n    </div>\n  );\n}\n",
+      "type": "registry:example",
+      "target": ""
+    }
+  ]
+}

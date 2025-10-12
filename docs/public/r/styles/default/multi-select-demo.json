@@ -1,0 +1,15 @@
+{
+  "name": "multi-select-demo",
+  "type": "registry:example",
+  "registryDependencies": [
+    "multi-select"
+  ],
+  "files": [
+    {
+      "path": "examples/multi-select-demo.tsx",
+      "content": "'use client';\n\nimport * as React from 'react';\n\nimport { MultiSelect } from '@/registry/default/ui/multi-select';\n\nexport default function MultiSelectDemo() {\n  const [selected, setSelected] = React.useState<string[]>([]);\n\n  const frameworks = [\n    { label: 'React', value: 'react' },\n    { label: 'Vue', value: 'vue' },\n    { label: 'Angular', value: 'angular' },\n    { label: 'Svelte', value: 'svelte' },\n    { label: 'Ember', value: 'ember' },\n  ];\n\n  return (\n    <div className='w-full max-w-md'>\n      <MultiSelect\n        options={frameworks}\n        selected={selected}\n        onChange={setSelected}\n        placeholder='Frameworks'\n      />\n    </div>\n  );\n}\n",
+      "type": "registry:example",
+      "target": ""
+    }
+  ]
+}

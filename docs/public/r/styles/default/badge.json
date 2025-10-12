@@ -1,0 +1,16 @@
+{
+  "name": "badge",
+  "type": "registry:ui",
+  "dependencies": [
+    "@radix-ui/react-slot",
+    "class-variance-authority"
+  ],
+  "files": [
+    {
+      "path": "ui/badge.tsx",
+      "content": "import { Slot } from '@radix-ui/react-slot';\nimport { cva, type VariantProps } from 'class-variance-authority';\nimport type * as React from 'react';\n\nimport { cn } from '@/lib/utils';\n\nconst badgeVariants = cva(\n  'inline-flex h-5 w-fit shrink-0 items-center justify-center gap-1 overflow-hidden whitespace-nowrap border px-1.5 font-semibold text-xs leading-4 transition-[color,box-shadow] focus-visible:border-ring focus-visible:ring-[3px] focus-visible:ring-ring/50 aria-invalid:border-destructive aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 [&>svg]:pointer-events-none [&>svg]:size-3',\n  {\n    variants: {\n      variant: {\n        positive: 'border-success/30 bg-success/10 text-success',\n        info: 'border-primary/30 bg-primary/10 text-primary',\n        negative: 'border-destructive/30 bg-destructive/10 text-destructive',\n        warning: 'border-attention/30 bg-attention/10 text-attention',\n        urgent: 'border-destructive bg-destructive text-destructive-foreground',\n      },\n      shape: {\n        default: 'rounded-md',\n        pill: 'rounded-full',\n        square: 'rounded-none',\n      },\n    },\n    defaultVariants: {\n      variant: 'positive',\n      shape: 'default',\n    },\n  }\n);\n\ninterface BadgeProps extends React.ComponentProps<'span'>, VariantProps<typeof badgeVariants> {\n  asChild?: boolean;\n  icon?: React.ReactNode;\n}\n\nfunction Badge({\n  className,\n  variant,\n  shape,\n  asChild = false,\n  icon,\n  children,\n  ...props\n}: BadgeProps) {\n  const Comp = asChild ? Slot : 'span';\n\n  return (\n    <Comp data-slot='badge' className={cn(badgeVariants({ variant, shape }), className)} {...props}>\n      {icon && <span className='flex h-3 w-3 items-center justify-center'>{icon}</span>}\n      {children}\n    </Comp>\n  );\n}\n\nexport { Badge, badgeVariants };\n",
+      "type": "registry:ui",
+      "target": ""
+    }
+  ]
+}
